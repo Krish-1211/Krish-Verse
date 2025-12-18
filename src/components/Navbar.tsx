@@ -37,11 +37,20 @@ const Navbar = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'py-4' : 'py-6'
           }`}
       >
+        <div className="absolute left-8 top-1/2 -translate-y-1/2 hidden md:block">
+          <Link to="/">
+            <img
+              src="/logo_transparent.png"
+              alt="Krishverse Logo"
+              className="h-24 w-auto object-contain hover:scale-105 transition-transform duration-300"
+            />
+          </Link>
+        </div>
         <div className="section-container flex justify-center">
           <div
             className={`flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 w-full md:w-auto md:min-w-[600px] bg-white/90 backdrop-blur-md border border-white/20 shadow-lg shadow-black/10`}
           >
-            {/* Logo */}
+            {/* Logo Text */}
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link to="/" className="text-xl font-bold tracking-tight text-black">
                 krishverse<span className="text-accent">.</span>
