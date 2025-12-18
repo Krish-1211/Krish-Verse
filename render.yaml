@@ -1,9 +1,10 @@
 services:
-  - type: site
+  - type: web
     name: krish-verse
-    branch: main
+    env: static
     buildCommand: npm install && npm run build
-    publishDir: dist
+    staticPublishPath: ./dist
+    branch: main
     routes:
       - type: rewrite
         source: /*
